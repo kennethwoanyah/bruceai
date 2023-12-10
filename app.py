@@ -59,10 +59,10 @@ def get_spotify_song(mood):
         # Steph added feature
         # Add like and dislike buttons
         # Add heart (like) and thumbs-down (dislike) buttons
-        if st.button("❤️ Like"):
-              st.warning('Feature under development!')
-        if st.button("👎 Dislike"):
-              st.warning('Feature under development!')
+        # if st.button("❤️ Like"):
+        #       st.warning('Feature under development!')
+        # if st.button("👎 Dislike"):
+        #       st.warning('Feature under development!')
 
 # Function to generate a new song
 def generate_new_song(user_input):
@@ -157,6 +157,11 @@ def main():
         elif choice == "Get a Song Suggestion from Spotify":
             mood = extract_mood(user_input)
             get_spotify_song(mood)
+
+        if st.button("❤️ Like"):
+              st.warning('Feature under development!')
+        if st.button("👎 Dislike"):
+              st.warning('Feature under development!')    
 
 if __name__ == "__main__":
     main()
