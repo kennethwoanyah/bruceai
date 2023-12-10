@@ -159,9 +159,9 @@ def main():
             get_spotify_song(mood)
 
     if st.button("❤️ Like"):
-              st.warning('Feature under development!')
+              st.info('Thank you for your feedback, we will store this song for you!')
     if st.button("👎 Dislike"):
-              st.warning('Feature under development!')    
+              st.info('Thank you for your feedback, this song will not be stored!')    
 
 if __name__ == "__main__":
     main()
