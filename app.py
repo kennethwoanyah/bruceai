@@ -158,9 +158,9 @@ def main():
             mood = extract_mood(user_input)
             get_spotify_song(mood)
 
-        if st.button("❤️ Like"):
+    if st.button("❤️ Like"):
               st.warning('Feature under development!')
-        if st.button("👎 Dislike"):
+    if st.button("👎 Dislike"):
               st.warning('Feature under development!')    
 
 if __name__ == "__main__":
