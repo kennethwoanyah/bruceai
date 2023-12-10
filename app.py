@@ -60,9 +60,9 @@ def get_spotify_song(mood):
         # Add like and dislike buttons
         # Add heart (like) and thumbs-down (dislike) buttons
         # if st.button("❤️ Like"):
-        #     st.write(f"You liked the song: {track_name}")
+        #       st.write(f"You liked the song: {track_name}")
         # if st.button("👎 Dislike"):
-        #     st.write(f"You disliked the song: {track_name}")
+        #       st.write(f"You disliked the song: {track_name}")
 
 # Function to generate a new song
 def generate_new_song(user_input):
