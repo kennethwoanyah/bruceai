@@ -56,10 +56,10 @@ def get_spotify_song(mood):
         # Steph added feature
         # Add like and dislike buttons
         # Add heart (like) and thumbs-down (dislike) buttons
-        if st.button("❤️ Like"):
-            st.write(f"You liked the song: {track_name}")
-        if st.button("👎 Dislike"):
-            st.write(f"You disliked the song: {track_name}")
+        # if st.button("❤️ Like"):
+        #     st.write(f"You liked the song: {track_name}")
+        # if st.button("👎 Dislike"):
+        #     st.write(f"You disliked the song: {track_name}")
 
 # Function to generate a new song
 def generate_new_song(user_input):
@@ -91,10 +91,10 @@ def generate_new_song(user_input):
         # Steph added feature
         # Add like and dislike buttons
         # Add heart (like) and thumbs-down (dislike) buttons
-        if st.button("❤️ Like"):
-            st.write(f"You liked the song")
-        if st.button("👎 Dislike"):
-            st.write(f"You disliked the song")
+        # if st.button("❤️ Like"):
+        #     st.write(f"You liked the song")
+        # if st.button("👎 Dislike"):
+        #     st.write(f"You disliked the song")
     except Exception as e:
         st.error("Error in audio generation: " + str(e))
 
@@ -148,7 +148,9 @@ def main():
 
     if st.button("Proceed"):
         if choice == "Generate a New Song":
-            generate_new_song(user_input)
+            # generate_new_song(user_input)
+            st.warning('Feature under development!')
+
         elif choice == "Get a Song Suggestion from Spotify":
             mood = extract_mood(user_input)
             get_spotify_song(mood)
