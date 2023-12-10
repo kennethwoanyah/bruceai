@@ -19,11 +19,14 @@ def extract_mood(user_input):
     try:
         prompt = (
             """Based on the following user input, suggest a single mood keyword for a Spotify song. 
-            If the input suggests a negative or tired mood, suggest a mood that's uplifting 
-            Essentially, suggest a song that is positive if user input is negative and also helps the user feel better
-            If the mood is sleep or slugish let the song be very motivating and active
-            If the mood is tired or fatigued or something like that suggest a relaxing song
-            If the input is positive, suggest a mood that maintains the positivity:\n\n"""
+            Analyze the user's input to determine their current mood. Based on this mood, suggest a single mood keyword for a Spotify song or nature sound that either complements or appropriately counters their mood:
+
+Negative or Tired Moods: If the user expresses feelings of negativity, tiredness, or fatigue, recommend a song or sound that uplifts or relaxes. Specifically:
+
+If the mood suggests sluggishness or sleepiness, recommend a song that is motivating and energetic.
+If the mood indicates tiredness or fatigue, suggest a song that is soothing and calming, or consider recommending nature sounds (like forest ambiance, ocean waves, or gentle rain) for relaxation.
+Positive Moods: If the user's input reflects a positive mood, recommend a song that enhances and maintains this positivity. The suggested mood should match the cheerful or upbeat nature of the user's current state.
+Also don't repeat modes. be creative so that the result is not the same every time but similar\n\n"""
             f"{user_input}"
         )
         response = openai.Completion.create(
