@@ -18,15 +18,14 @@ def extract_mood(user_input):
 
     try:
         prompt = (
-            """Based on the following user input, suggest a single mood keyword for a Spotify song. 
-            Analyze the user's input to determine their current mood. Based on this mood, suggest a single mood keyword for a Spotify song or nature sound that either complements or appropriately counters their mood:
-
-Negative or Tired Moods: If the user expresses feelings of negativity, tiredness, or fatigue, recommend a song or sound that uplifts or relaxes. Specifically:
-
-If the mood suggests sluggishness or sleepiness, recommend a song that is motivating and energetic.
-If the mood indicates tiredness or fatigue, suggest a song that is soothing and calming, or consider recommending nature sounds (like forest ambiance, ocean waves, or gentle rain) for relaxation.
-Positive Moods: If the user's input reflects a positive mood, recommend a song that enhances and maintains this positivity. The suggested mood should match the cheerful or upbeat nature of the user's current state.
-Also don't repeat modes. be creative so that the result is not the same every time but similar\n\n"""
+            """"Determine the emotional state conveyed in the user's input and accordingly suggest a single keyword that encapsulates the essence of a Spotify song or nature sound. Your suggestions should either align with or thoughtfully contrast the user's emotional tone, ensuring each recommendation is distinct yet relevant:
+ 		For Low or Drained Emotional States:
+     In cases of lethargy or drowsiness, propose a song that is dynamic and invigorating.
+     When the user appears fatigued or worn out, suggest a tranquil, serene song or calming natural sounds such as a forest scene, oceanic waves, or soft rainfall.
+	For Uplifted or Joyful Emotional States:
+     If the user exhibits a cheerful or buoyant mood, recommend a song that is lively and spirited, further elevating their spirits.
+Strive for uniqueness in each suggestion, crafting tailored recommendations that reflect an understanding of the nuanced emotional context presented by the user."
+"""
             f"{user_input}"
         )
         response = openai.Completion.create(
