@@ -151,8 +151,8 @@ def main():
 
     if st.button("Proceed"):
         if choice == "Generate a New Song":
-            # generate_new_song(user_input)
-            st.warning('Feature under development!')
+            generate_new_song(user_input)
+            #st.warning('Feature under development!')
 
         elif choice == "Get a Song Suggestion from Spotify":
             mood = extract_mood(user_input)
