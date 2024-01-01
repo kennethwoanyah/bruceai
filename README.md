@@ -1,6 +1,6 @@
 Bruce AI is a Streamlit web application designed for mood analysis and music recommendation. Here's a breakdown of its main components:
 
-Imports: The script imports necessary libraries such as streamlit, openai, and spotipy. These are used for building the web interface, interacting with OpenAI's API, and accessing Spotify's music database, respectively.
+Imports: The script imports necessary libraries such as streamlit, openai, and spotify. These are used for building the web interface, interacting with OpenAI's API, and accessing Spotify's music database, respectively.
 
 OpenAI Integration:
 
